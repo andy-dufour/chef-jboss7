@@ -1,0 +1,18 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+- name: bb-gold
+  driver_config:
+    box: bb-gold
+    box_url: http://localhost/ubuntu1204.box
+
+suites:
+  - name: default
+    run_list:
+      - recipe[jboss7::default]
+    attributes:
