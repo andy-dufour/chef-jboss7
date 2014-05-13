@@ -18,10 +18,22 @@ TODO: CentOS, Windows
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['jboss7']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['jboss7']['jboss_home']</tt></td>
+    <td>String</td>
+    <td>Path to the parent directory where JBoss will be installed. E.g., if you want JBoss installed in /opt/jboss, this would be /opt/</td>
+    <td><tt>/opt/jboss/</tt></td>
+  </tr>
+    <tr>
+    <td><tt>['jboss7']['jboss_user']</tt></td>
+    <td>String</td>
+    <td>User for JBoss to run as.</td>
+    <td><tt>web</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['jboss7']['dl_url']</tt></td>
+    <td>String</td>
+    <td>URL to download the JBoss tarball from.</td>
+    <td><tt>http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz</tt></td>
   </tr>
 </table>
 
