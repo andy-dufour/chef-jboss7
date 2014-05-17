@@ -6,5 +6,8 @@ description      'Installs/Configures jboss7'
 long_description 'Installs/Configures jboss7'
 version          '0.1.0'
 
+supports 'ubuntu'
+
 depends 'java', '~> 1.22.0'
+depends 'pacman'
 depends 'apt'

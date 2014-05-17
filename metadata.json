@@ -1,0 +1,31 @@
+{
+  "name": "jboss7",
+  "description": "Installs/Configures jboss7",
+  "long_description": "Description\n===========\nInstalls and configures JBoss 7.\n\nRequirements\n============\njava\n\npacman\n======\n\n- This is the initial version. Please provide feedback.",
+  "maintainer": "Andrew DuFour",
+  "maintainer_email": "andy.k.dufour@gmail.com",
+  "license": "Apache v2.0",
+  "platforms": {
+  },
+  "dependencies": {
+    "java": ">= 0.0.0",
+    "pacman": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.10.0"
+}

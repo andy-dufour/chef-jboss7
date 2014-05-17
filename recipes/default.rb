@@ -57,10 +57,41 @@ template "/etc/init.d/jboss" do
   owner "root"
   group "root"
   variables({
-	:jboss_user => node[:jboss7][:jboss_user]
+	:jboss_user => node['jboss7']['jboss_user']
   })
   notifies :enable, "service[jboss]", :delayed
   notifies :restart, "service[jboss]", :delayed
+end
+
+template "#{jboss_home}/jboss/standalone/configuration/standalone.xml" do
+	source "standalone_xml.erb"
+	owner "web"
+	group "web"
+	mode "0644"
+	variables({
+      :wsdl_bind_addr  => node['jboss7']['wsdl_bind_addr'],
+      :mgmt_bind_addr  => node['jboss7']['mgmt_bind_addr'],
+      :public_bind_addr  => node['jboss7']['public_bind_addr'],
+      :unsecure_bind_addr  => node['jboss7']['unsecure_bind_addr'],
+      :ajp_port  => node['jboss7']['ajp_port'],
+      :http_port  => node['jboss7']['http_port'],
+      :https_port  => node['jboss7']['https_port']
+      })
+	notifies :restart, "service[jboss]", :delayed
+end
+
+template "#{jboss_home}/jboss/bin/standalone.conf" do
+	source "standalone_conf.erb"
+	owner "web"
+	group "web"
+	mode "0644"
+	variables({
+      :jvm_min_mem  => node['jboss7']['jvm_min_mem'],
+      :jvm_max_mem  => node['jboss7']['jvm_max_mem'],
+      :jvm_perm_mem  => node['jboss7']['jvm_perm_mem'],
+      :jvm_extra_ops => node['jboss7']['jvm_extra_ops']
+      })
+	notifies :restart, "service[jboss]", :delayed
 end
 
 service 'jboss' do

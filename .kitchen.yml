@@ -6,10 +6,10 @@ provisioner:
   name: chef_solo
 
 platforms:
-- name: bb-gold
+- name: ubuntu1204
   driver_config:
-    box: bb-gold
-    box_url: http://localhost/ubuntu1204.box
+    box: cloud-ubuntu1204
+    box_url: https://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box
 
 suites:
   - name: default
