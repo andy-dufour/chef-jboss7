@@ -2,6 +2,8 @@
 
 This is a JBoss 7 cookbook. It's still in development. Feel free to contribute.
 
+V. 0.10.2 - I realize I forgot to include sane defaults for the port numbers. Now added.
+
 ## Supported Platforms
 
 Ubuntu 12.04
@@ -34,6 +36,42 @@ TODO: CentOS, Windows
     <td>String</td>
     <td>URL to download the JBoss tarball from.</td>
     <td><tt>http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.tar.gz</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['jboss7']['jvm_min_mem']</tt></td>
+    <td>String</td>
+    <td>Sets your Xms JVM parameter</td>
+    <td><tt>512m</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['jboss7']['jvm_max_mem']</tt></td>
+    <td>String</td>
+    <td>Sets your Xmx JVM parameter</td>
+    <td><tt>1024m</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['jboss7']['jvm_perm_mem']</tt></td>
+    <td>String</td>
+    <td>Sets your PermGenSpace JVM parameter</td>
+    <td><tt>256m</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['jboss7']['ajp_port']</tt></td>
+    <td>String</td>
+    <td>Sets your AJP port in standalone.xml</td>
+    <td><tt>8009</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['jboss7']['http_port']</tt></td>
+    <td>String</td>
+    <td>Sets your HTTP port in standalone.xml</td>
+    <td><tt>8080</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['jboss7']['https_port']</tt></td>
+    <td>String</td>
+    <td>Sets your HTTPS port in standalone.xml</td>
+    <td><tt>8443</tt></td>
   </tr>
 </table>
 

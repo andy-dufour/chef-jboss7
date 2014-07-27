@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "java": ">= 0.0.0",
-    "pacman": ">= 0.0.0"
+    "apt": ">= 0.0.0"
   },
   "recommendations": {
   },
@@ -27,5 +27,5 @@
   },
   "recipes": {
   },
-  "version": "0.10.0"
+  "version": "0.10.1"
 }
