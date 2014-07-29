@@ -2,13 +2,28 @@
 
 This is a JBoss 7 cookbook. It's still in development. Feel free to contribute.
 
-V. 0.10.2 - I realize I forgot to include sane defaults for the port numbers. Now added.
+V. 0.11.0   - Added a jboss7_user provider to create JBoss 7 standalone mgmt users. 
+            - Added sane defaults for bind addresses.
+
+V. 0.10.2   - I realize I forgot to include sane defaults for the port numbers. Now added.
 
 ## Supported Platforms
 
 Ubuntu 12.04
 
 TODO: CentOS, Windows
+
+## Providers
+
+jboss7_user - JBoss 7 user takes two attributes, the "name" of the resource is the account you're adding to the management realm. 
+The password is HEX( MD5( username ':' realm ':' password)). The example password is: HEX( MD5(Administrator:ManagementRealm:changeit!))
+You should be able to login to your JBoss management console with the user Administrator, password changeit!
+The provider uses sed -i to delete users therefore is not GNU sed compliant. User beware!
+The provider also only concerns itself with the standalone configuration.
+
+TODO: Maybe put password in an encrpted databag?
+Refactor into a HWRP/library to use native ruby commands to modify jboss user file, in order to be platform independant.
+Add domain user configuration.
 
 ## Attributes
 
