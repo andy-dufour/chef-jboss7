@@ -11,7 +11,7 @@ include_recipe 'apt'
 include_recipe 'java'
 
 jboss_home = node['jboss7']['jboss_home']
-jboss_user = node['jboss7']['jboss_user']
+jboss_user = node[:jboss7][:jboss_user]
 
 tarball_name = node['jboss7']['dl_url'].
 	split('/')[-1].
