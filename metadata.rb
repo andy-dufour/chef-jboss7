@@ -4,7 +4,7 @@ maintainer_email 'andy.k.dufour@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures jboss7'
 long_description 'Installs/Configures jboss7'
-version          '0.11.5'
+version          '0.11.6'
 
 depends 'apt'
 depends 'java'
