@@ -25,6 +25,10 @@ TODO: Maybe put password in an encrpted databag?
 Refactor into a HWRP/library to use native ruby commands to modify jboss user file, in order to be platform independant.
 Add domain user configuration.
 
+## GIT Location
+
+https://github.com/andy-dufour/chef-jboss7
+
 ## Attributes
 
 <table>
