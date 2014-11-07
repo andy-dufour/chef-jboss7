@@ -277,13 +277,13 @@
 
     <interfaces>
         <interface name="management">
-            <inet-address value="${jboss.bind.address.management:<%= @mgmt_bind_addr -%>}"/>
+            <inet-address value="${jboss.bind.address.management:<%= node['jboss7']['mgmt_bind_addr'] -%>}"/>
         </interface>
         <interface name="public">
-            <inet-address value="${jboss.bind.address:<%= @public_bind_addr -%>}"/>
+            <inet-address value="${jboss.bind.address:<%= node['jboss7']['public_bind_addr'] -%>}"/>
         </interface>
         <interface name="unsecure">
-            <inet-address value="${jboss.bind.address.unsecure:<%= @unsecure_bind_addr -%>}"/>
+            <inet-address value="${jboss.bind.address.unsecure:<%= node['jboss7']['unsecure_bind_addr'] -%>}"/>
         </interface>
     </interfaces>
 
@@ -291,9 +291,9 @@
         <socket-binding name="management-native" interface="management" port="${jboss.management.native.port:9999}"/>
         <socket-binding name="management-http" interface="management" port="${jboss.management.http.port:9990}"/>
         <socket-binding name="management-https" interface="management" port="${jboss.management.https.port:9443}"/>
-        <socket-binding name="ajp" port="<%= @ajp_port -%>"/>
-        <socket-binding name="http" port="<%= @http_port -%>"/>
-        <socket-binding name="https" port="<%= @https_port -%>"/>
+        <socket-binding name="ajp" port="<%= node['jboss7']['ajp_port'] -%>"/>
+        <socket-binding name="http" port="<%= node['jboss7']['http_port'] -%>"/>
+        <socket-binding name="https" port="<%= node['jboss7']['https_port'] -%>"/>
         <socket-binding name="osgi-http" interface="management" port="8090"/>
         <socket-binding name="remoting" port="4447"/>
         <socket-binding name="txn-recovery-environment" port="4712"/>
