@@ -71,7 +71,7 @@ fi
 
 # Run as jboss user
 if [ -z "$JBOSS_USER" ]; then
-	JBOSS_USER="<%= @jboss_user -%>" 
+	JBOSS_USER="<%= node['jboss7']['jboss_user'] -%>" 
 fi
 
 # Check jboss user
