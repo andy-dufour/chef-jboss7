@@ -47,7 +47,7 @@ fi
 # Specify options to pass to the Java VM.
 #
 if [ "x$JAVA_OPTS" = "x" ]; then
-   JAVA_OPTS="-Xms<%= @jvm_min_mem -%> -Xmx<%= @jvm_max_mem -%> -XX:MaxPermSize=<%= @jvm_perm_mem -%> -Djava.net.preferIPv4Stack=true -Dorg.jboss.resolver.warning=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 <%= @jvm_extra_ops -%>"
+   JAVA_OPTS="-Xms<%= node['jboss7']['jvm_min_mem'] -%> -Xmx<%= node['jboss7']['jvm_max_mem'] -%> -XX:MaxPermSize=<%= node['jboss7']['jvm_perm_mem'] -%> -Djava.net.preferIPv4Stack=true -Dorg.jboss.resolver.warning=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 <%= node['jboss7']['jvm_extra_ops'] -%>"
    JAVA_OPTS="$JAVA_OPTS -Djboss.modules.system.pkgs=$JBOSS_MODULES_SYSTEM_PKGS -Djava.awt.headless=true"
    JAVA_OPTS="$JAVA_OPTS -Djboss.server.default.config=standalone.xml"
 else
