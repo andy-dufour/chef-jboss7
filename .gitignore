@@ -18,5 +18,3 @@ bin/*
 
 .kitchen/
 .kitchen.local.yml
-
-metadata.rb
