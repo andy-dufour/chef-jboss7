@@ -17,6 +17,10 @@ user node['jboss7']['jboss_user'] do
   shell '/bin/false'
 end
 
+group node['jboss7']['jboss_group'] do
+  action :create
+end
+
 ark 'jboss' do
   url node['jboss7']['dl_url']
   home_dir node['jboss7']['jboss_home']
@@ -27,16 +31,16 @@ end
 
 template "#{node['jboss7']['jboss_home']}/standalone/configuration/standalone.xml" do
   source 'standalone_xml.erb'
-  owner 'web'
-  group 'web'
+  owner node['jboss7']['jboss_user']
+  group node['jboss7']['jboss_group']
   mode '0644'
   notifies :restart, 'service[jboss]', :delayed
 end
 
 template "#{node['jboss7']['jboss_home']}/bin/standalone.conf" do
   source 'standalone_conf.erb'
-  owner 'web'
-  group 'web'
+  owner node['jboss7']['jboss_user']
+  group node['jboss7']['jboss_group']
   mode '0644'
   notifies :restart, "service[jboss]", :delayed
 end
