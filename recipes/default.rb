@@ -27,16 +27,16 @@ end
 
 template "#{node['jboss7']['jboss_home']}/standalone/configuration/standalone.xml" do
   source 'standalone_xml.erb'
-  owner 'web'
-  group 'web'
+  owner node['jboss7']['jboss_user']
+  group node['jboss7']['jboss_user']
   mode '0644'
   notifies :restart, 'service[jboss]', :delayed
 end
 
 template "#{node['jboss7']['jboss_home']}/bin/standalone.conf" do
   source 'standalone_conf.erb'
-  owner 'web'
-  group 'web'
+  owner node['jboss7']['jboss_user']
+  group node['jboss7']['jboss_user']
   mode '0644'
   notifies :restart, "service[jboss]", :delayed
 end
