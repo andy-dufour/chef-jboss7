@@ -56,7 +56,7 @@ end
 
 private
 
-USR_FILE_PATH="/opt/jboss/standalone/configuration/mgmt-users.properties"
+USR_FILE_PATH="#{node['jboss7']['jboss_home']}standalone/configuration/mgmt-users.properties"
 
 def user_exists?(name)
 	cmdStr = "egrep ^#{ name }\=.* #{ USR_FILE_PATH }"
