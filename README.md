@@ -44,10 +44,16 @@ https://github.com/andy-dufour/chef-jboss7
     <td>Path to the parent directory where JBoss will be installed. E.g., if you want JBoss installed in /opt/jboss, this would be /opt/</td>
     <td><tt>/opt/jboss/</tt></td>
   </tr>
-    <tr>
+  <tr>
     <td><tt>['jboss7']['jboss_user']</tt></td>
     <td>String</td>
     <td>User for JBoss to run as.</td>
+    <td><tt>web</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['jboss7']['jboss_group']</tt></td>
+    <td>String</td>
+    <td>Group for JBoss to run as.</td>
     <td><tt>web</tt></td>
   </tr>
   <tr>

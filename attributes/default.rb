@@ -1,6 +1,7 @@
 default['jboss7']['jboss_path'] = '/opt'
 default['jboss7']['jboss_home'] = "#{node['jboss7']['jboss_path']}/jboss"
 default['jboss7']['jboss_user'] = 'web'
+default['jboss7']['jboss_group'] = 'web'
 default['jboss7']['jboss_version'] = '7.1.1.Final'
 default['jboss7']['dl_url'] = "http://download.jboss.org/jbossas/7.1/jboss-as-#{node['jboss7']['jboss_version']}/jboss-as-#{node['jboss7']['jboss_version']}.tar.gz"
 default['jboss7']['jvm_min_mem'] = '512m'
