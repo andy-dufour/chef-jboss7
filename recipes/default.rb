@@ -52,18 +52,18 @@ dist_dir, _conf_dir = value_for_platform_family(
 
 template '/etc/jboss-as.conf' do
   source "#{dist_dir}/jboss-as.conf.erb"
-  mode 0775
+  mode 0644
   owner 'root'
-  group node['root_group']
+  group 'root'
   only_if { platform_family?('rhel') }
   notifies :restart, 'service[jboss7]', :delayed
 end
 
 template '/etc/init.d/jboss7' do
   source "#{dist_dir}/jboss7-init.erb"
-  mode 0775
+  mode 0644
   owner 'root'
-  group node['root_group']
+  group 'root'
   notifies :enable, 'service[jboss7]', :delayed
   notifies :restart, 'service[jboss7]', :delayed
 end
@@ -76,5 +76,5 @@ end
 
 service 'jboss7' do
   supports restart: true
-  action :enable
+  action [:enable, :start]
 end
