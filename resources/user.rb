@@ -21,8 +21,7 @@
 actions :create, :delete
 default_action :create
 
-attribute :user_name, :name_attribute => true, :kind_of => String, :required => true
-attribute :password,	:kind_of => String
+attribute :user_name, name_attribute: true, kind_of: String, required: true
+attribute :password,	kind_of: String
 
 attr_accessor :exists
-
