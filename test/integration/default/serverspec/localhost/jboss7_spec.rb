@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe service('jboss') do  
+describe service('jboss7') do
   it { should be_enabled   }
   it { should be_running   }
-end  
+end
 
-describe port(8080) do  
+describe port(8080) do
   it { should be_listening }
 end
