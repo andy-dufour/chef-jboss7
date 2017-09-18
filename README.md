@@ -1,6 +1,6 @@
 # jboss7-cookbook
 
-Testing additions #2.
+Testing additions #3.
 
 
 This is a JBoss 7 cookbook. It's still in development. Feel free to contribute.
