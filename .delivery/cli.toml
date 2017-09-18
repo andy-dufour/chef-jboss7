@@ -1,0 +1,7 @@
+server = "ec2-52-36-215-216.us-west-2.compute.amazonaws.com"
+api_protocol = "https"
+user = "adufour"
+enterprise = "solutions"
+organization = "andrew-test"
+git_port = "8989"
+pipeline = "master"
