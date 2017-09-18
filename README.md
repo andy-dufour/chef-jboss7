@@ -1,5 +1,8 @@
 # jboss7-cookbook
 
+Testing addition.
+
+
 This is a JBoss 7 cookbook. It's still in development. Feel free to contribute.
 
 V. 1.0.0    - **Breaking change** - service is changed from jboss to jboss7.
